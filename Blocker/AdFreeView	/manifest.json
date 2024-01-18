@@ -10,9 +10,7 @@
         "notifications",
         "alarms",
         "storage",
-        "cookies",
-        "management",
-        "system.display"
+        "cookies"
     ],
     "host_permissions": [
         "<all_urls>"
