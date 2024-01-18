@@ -22,9 +22,9 @@ async function toggleAdBlocking()
 {
   const isEnabled = await getRulesEnabledState();
   if (isEnabled) {
-    await disableRulesForCurrentPage();
+    await disableRulesForCurrentPage(true);
   } else {
-    await enableRulesForCurrentPage();
+    await enableRulesForCurrentPage(true);
   }
   a = 1;
   updateButtonState();

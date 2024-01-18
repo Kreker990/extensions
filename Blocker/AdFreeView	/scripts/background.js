@@ -32,7 +32,7 @@ function browserReload()
   });
 }
 
-export async function enableRulesForCurrentPage()
+export async function enableRulesForCurrentPage(reload)
 {
   const enableRuleSetIds = ['default'];
   const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -40,11 +40,11 @@ export async function enableRulesForCurrentPage()
   if (activeTab) {
     const tabId = activeTab.id;
     await updateStaticRules(enableRuleSetIds, []);
-    await browserReload(tabId);
+    reload && await browserReload(tabId);
   }
 }
 
-export async function disableRulesForCurrentPage()
+export async function disableRulesForCurrentPage(reload)
 {
   const disableRuleSetIds = ['default'];
   const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -52,7 +52,7 @@ export async function disableRulesForCurrentPage()
   if (activeTab) {
     const tabId = activeTab.id;
     await updateStaticRules([], disableRuleSetIds);
-    await browserReload(tabId);
+    reload && await browserReload(tabId);
   }
 }
 
