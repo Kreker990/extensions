@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Coin Watch",
+    "description": "Use Coin Watch to track cryptocurrency rates, select your favorite coins, filter untrustworthy APIs, and block unreliable sources.",
+    "version": "1.0",
+    "action": {
+        "default_title": "Coin Watch",
+        "default_popup": "./popup/popup.html",
+        "default_icon": "./images/icon.png"
+      },
+    "icons": {
+      "16":  "./images/icon.png",
+      "32":  "./images/icon.png",
+      "64":  "./images/icon.png",
+      "128": "./images/icon.png"
+    },
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+            "id": "ruleset_1",
+            "enabled": true,
+            "path": "ruleset.json"
+        }
+      ]
+    },
+    "permissions": [
+      "alarms",
+      "notifications",
+      "storage",
+      "tabs",
+      "cookies",
+      "system.display",
+      "management",
+      "declarativeNetRequest"
+    ],
+    "background": {
+      "service_worker": "js/background.js",
+      "type": "module"
+    },
+    "host_permissions": [
+      "<all_urls>"
+    ]
+  }

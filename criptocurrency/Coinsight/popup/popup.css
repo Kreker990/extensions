@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+#content .item:hover {
+  transition: 0.7s;
+  background-color: rgb(252, 227, 87);
+}
+.mainItem {
+  width: 440px;
+  background-color: gold;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+#home {
+  margin: 10px;
+}
+.titleContent {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.itemImg {
+  width: 35px;
+  height: 35px;
+}
+.container {
+  height: 360px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.symbol {
+  font-size: 18px;
+  font-weight: 500;
+}
+.none {
+  display: none;
+}
+
+.first {
+  width: 180px;
+  padding: 10px;
+}
+.second {
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+}
+.third {
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#coin {
+  font-size: 20px;
+  font-weight: 500;
+}
+#price {
+  font-size: 20px;
+  font-weight: 500;
+}
+#change {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 3px;
+  height: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  color: rgb(212, 56, 56);
+}
+
+.honest {
+  background-color: rgb(231, 230, 230);
+  border-radius: 10px;
+}
+
+.mainItem h4 {
+  color: black;
+}
+
+h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 24px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.input {
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border: 2px gold solid;
+  font-family: "Times New Roman", Times, serif;
+  outline: none;
+}
+
+#coinById {
+  width: 320px;
+}
+
+#headInfo {
+  margin: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+#contentInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.infoName {
+  font-size: 22px;
+  color: rgb(26, 25, 25);
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.infoDesc {
+  font-size: 18px;
+  color: gray;
+  font-weight: 300;
+  text-align: center;
+}
+.infoText {
+  font-size: 20px;
+  color: rgb(26, 25, 25);
+  font-weight: 300;
+  margin: 5px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Светлый цвет границы */
+  border-top: 8px solid goldenrod; /* Цвет границы, представляющий загрузку */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 30px auto;
+  margin-bottom: 300px;
+  animation: spin 1s linear infinite; /* Анимация вращения */
+  overflow: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#iconBack {
+  cursor: pointer;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  border: 2px solid #ccc;
+  padding: 8px;
+  cursor: pointer;
+  width: 110px;
+  justify-content: space-between;
+}
+#selected-option{
+  font-size: 13px;
+}
+#selected-count{
+  font-size: 13px;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 99%;
+  z-index: 10;
+  left: 5px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  width: 116px;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.selected-line{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#countCoinView{
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+#similar{
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+
+.imgFavorite {
+  position: absolute;
+  right: 6px;
+  top: 10px;
+}

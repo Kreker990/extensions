@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+    <title>Coin Watch</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="home">
+      <div class="header">
+        <img src="../images/logo.png" alt="logo" height="40">
+      </div>
+      <div class="selected-search">
+        <input
+          type="text"
+          class="input"
+          maxlength="25"
+          id="input"
+          placeholder="search..."
+        />
+        <div class="selected-line">
+          <div class="custom-select selected-line">
+            <div class="select-wrapper" id="selectCurrency">
+              <span id="selected-option">Select an option</span>
+              <span>&#9660;</span>
+            </div>
+            <div class="options" id="options">
+              <div class="option" id="selected1cur">USD</div>
+              <div class="option" id="selected2cur">EUR</div>
+            </div>
+          </div>
+          <div class="custom-select selected-line">
+            <div class="select-wrapper" id="selectCount">
+              <span id="selected-count">Select count</span>
+              <span>&#9660;</span>
+            </div>
+            <div class="options" id="count">
+              <div class="option" id="selected1count">50</div>
+              <div class="option" id="selected2count">100</div>
+              <div class="option" id="selected3count">150</div>
+              <div class="option" id="selected4count">200</div>
+              <div class="option" id="selected5count">250</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item mainItem">
+        <h4 id="coin" class="first">Coin</h4>
+        <h4 id="price" class="second">Price</h4>
+        <h4 id="change" class="third">24h change</h4>
+      </div>
+      <div id="content" class="container loader"></div>
+      <h3 id="similar"></h3>
+    </div>
+    <div id="coinById" class="none">
+      <div id="headInfo">
+        <img
+          src="../images/iconback.png"
+          alt="iconBack"
+          width="50"
+          id="iconBack"
+        />
+        <div id="iconCoin" class="loader"></div>
+      </div>
+      <div id="contentInfo"></div>
+    </div>
+    <script src="./popup.js" type="module"></script>
+  </body>
+</html>

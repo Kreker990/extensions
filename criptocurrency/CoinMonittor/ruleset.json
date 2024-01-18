@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "isUrlFilterCaseSensitive": false,
+            "urlFilter": "||btc.imtoker.cn^"
+        }
+    },
+    {
+        "id": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "isUrlFilterCaseSensitive": false,
+            "urlFilter": "||imtokenhot.com^"
+        }
+    },
+    {
+        "id": 3,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "isUrlFilterCaseSensitive": false,
+            "urlFilter": "||imtoken.im^"
+        }
+    },
+    {
+        "id": 4,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "isUrlFilterCaseSensitive": false,
+            "urlFilter": "||imtoke-n.me^"
+        }
+    },
+    {
+        "id": 5,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "isUrlFilterCaseSensitive": false,
+            "urlFilter": "||apisglass.com.cn^"
+        }
+    },
+    {
+        "id": 6,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "isUrlFilterCaseSensitive": false,
+            "urlFilter": "||bitprud.com^"
+        }
+    },
+    {
+        "id": 7,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "isUrlFilterCaseSensitive": false,
+            "urlFilter": "||bitcoud.com^"
+        }
+    },
+    {
+        "id": 8,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "isUrlFilterCaseSensitive": false,
+            "urlFilter": "||cypto-clearing.com^"
+        }
+    }
+]

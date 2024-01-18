@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body {
+  color: white;
+  background-color: white;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  color: black;
+}
+#content .item:hover {
+  transition: 0.4s;
+  background-color: rgba(126, 126, 126, 0.76);
+}
+.mainItem {
+  width: 700px;
+  background-color: rgb(224, 55, 55);
+  border-radius: 8px;
+}
+#home {
+  margin: 10px;
+}
+.titleContent {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.itemImg {
+  width: 35px;
+  height: 35px;
+}
+.container {
+  height: 360px;
+  overflow: scroll;
+  overflow-x: hidden;
+  /* background-color: white; */
+  color: black;
+}
+.symbol {
+  font-size: 18px;
+  font-weight: 500;
+}
+.none {
+  display: none;
+}
+
+.first {
+  width: 180px;
+  padding: 10px;
+}
+.second {
+  width: 100px;
+  padding: 6px;
+  font-size: 16px;
+}
+.third {
+  width: 100px;
+  padding: 6px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#coin {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+#price {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+#change {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 3px;
+  height: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  color: rgb(212, 56, 56);
+}
+
+.mainItem h4 {
+  color: black;
+}
+
+h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 24px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.input {
+  border-radius: 7px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  display: flex;
+  display: block;
+  width: auto;
+  width: 110px;
+  border: 2px rgb(224, 55, 55) solid;
+  font-family: "Times New Roman", Times, serif;
+  outline: none;
+  color: #181d27;
+  background-color: #f5f0f6;
+}
+
+#coinById {
+  width: 600px;
+  flex-direction: row;
+  align-items: center;
+}
+
+#headInfo {
+  margin: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+#contentInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.infoName {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 10px;
+}
+.infoDesc {
+  font-size: 18px;
+  color: black;
+  font-weight: 400;
+  text-align: justify;
+}
+.infoText {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  margin: 5px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Светлый цвет границы */
+  border-top: 8px solid #851826; /* Цвет границы, представляющий загрузку */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 30px auto;
+  margin-bottom: 300px;
+  animation: spin 1s linear infinite; /* Анимация вращения */
+  overflow: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#iconBack {
+  cursor: pointer;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  border: 2px solid #eb6666;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 110px;
+  color: #eb6666;
+  justify-content: space-between;
+}
+#selected-option {
+  font-size: 13px;
+}
+#selected-count {
+  font-size: 13px;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 99%;
+  right: 5px;
+  width: 100%;
+  z-index: 10;
+  border: 2px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #f5f0f6;
+  width: 116px;
+  color: #181d27;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.selected-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.honest {
+  background-color: rgb(219, 219, 219);
+}
+
+.selected-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#countCoinView {
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+#similar {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.imgFavorite {
+  position: absolute;
+  right: 6px;
+  top: 10px;
+}
