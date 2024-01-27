@@ -4,6 +4,8 @@
     "description": "Blocked advertisements. Customizing the visual experience. Information about the number of cookies. Adaptive interface.",
     "version": "1.0.0",
     "permissions": [
+        "webRequest",
+        "webRequestBlocking",
         "declarativeNetRequest",
         "declarativeNetRequestFeedback",
         "tabs",
@@ -13,6 +15,7 @@
     ],
     "host_permissions": [
         "<all_urls>"
+        
     ],
     "background": {
         "service_worker": "scripts/background.js",

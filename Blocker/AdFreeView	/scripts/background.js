@@ -61,16 +61,6 @@ chrome.runtime.onInstalled.addListener(() =>
   chrome.declarativeNetRequest.setExtensionActionOptions({ displayActionCountAsBadgeText: true });
 });
 
-chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  var currentTab = tabs[0]; // тут будет ваша текущая вкладка
-  console.log(currentTab); // вывод информации о вкладке
-  chrome.action.getBadgeText({tabId: currentTab.id}, function(result) {
-    console.log("Текущий текст значка:", result);
-  });
-  // Вы можете использовать currentTab.id для получения ID вкладки
-});
-
-
 
 chrome.commands.onCommand.addListener((command) =>
 {
@@ -92,3 +82,21 @@ chrome.commands.onCommand.addListener((command) =>
     }
   });
 });
+
+chrome.webRequest.onBeforeRequest.addListener(
+  function(details) {
+      const url = new URL('');
+      const isAllowedSite = allowedSites.some(allowedUrl => url.host.includes(allowedUrl));
+
+      if (isAllowedSite) {
+          // Если сайт разрешен, не блокировать запрос
+          return { cancel: false };
+      } else {
+          // В противном случае применить логику блокировки
+          // Здесь может быть ваш код для блокировки
+          return { cancel: true };
+      }
+  },
+  { urls: ["<all_urls>"] },
+  ["blocking"]
+);
