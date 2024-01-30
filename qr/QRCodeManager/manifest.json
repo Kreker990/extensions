@@ -13,18 +13,21 @@
         "<all_urls>"
     ],
     "permissions": [
-        "storage"
+        "storage",
+        "scripting",
+        "tabs",
+        "activeTab"
     ],
     "background": {
         "service_worker": "background.js"
     },
     "content_scripts": [
         {
-            "js": [
-                "content.js"
-            ],
             "matches": [
                 "<all_urls>"
+            ],
+            "js": [
+                "content.js"
             ]
         }
     ],
