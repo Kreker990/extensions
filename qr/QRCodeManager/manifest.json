@@ -4,19 +4,19 @@
     "version": "1.0.0",
     "manifest_version": 3,
     "icons": {
-        "16": "logo.png",
-        "32": "logo.png",
-        "48": "logo.png",
-        "128": "logo.png"
+        "16": "assets/logo.png",
+        "32": "assets/logo.png",
+        "48": "assets/logo.png",
+        "128": "assets/logo.png"
     },
     "host_permissions": [
         "<all_urls>"
     ],
     "permissions": [
-        "storage",
-        "scripting",
         "tabs",
-        "activeTab"
+        "storage",
+        "cookies",
+        "clipboardWrite"
     ],
     "background": {
         "service_worker": "background.js"
@@ -35,9 +35,9 @@
         "default_popup": "./popup/popup.html",
         "default_title": "QR Code Manager",
         "default_icon": {
-            "16": "logo.png",
-            "32": "logo.png",
-            "64": "logo.png"
+            "16": "assets/logo.png",
+            "32": "assets/logo.png",
+            "64": "assets/logo.png"
         }
     }
 }
