@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Content</title>
+    <link rel="stylesheet" href="./popup.css">
+</head>
+
+<body>
+    <div class="resultBlock">
+        <div class="head">
+            <h4>Result:
+            </h4>
+            <div class="dot-spinner" id="loader">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+            </div>
+        </div>
+        <div id="resultDiv">
+            <p id="result">Scan the QR code</p>
+        </div>
+        <div class="buttons">
+            <div class="buttonResult" id="follow">Follow</div>
+            <div class="buttonResult" id="copy">Copy</div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <nav>
+                <a href="#html" class="link link1"><button class="Btn" id="btn1">
+
+                        <div class="sign">
+                            <img src="../assets/downloadIcon.png" alt="load" height="20px">
+                        </div>
+
+                        <div class="text"> <i class="fab fa-html5">
+                                Upload QR code
+                            </i></div>
+                    </button></a>
+                <a href="#css" class="link link2"><button class="Btn" id="btn2">
+
+                        <div class="sign">
+                            <img src="../assets/onThisPageIcon.png" alt="page icon" height="20px">
+                        </div>
+
+                        <div class="text"> <i class="fab fa-html5">
+                                Find on the page
+                            </i></div>
+                    </button></a>
+            </nav>
+            <div class="content">
+                <div class="item item1" id="html">
+                    <div id="drop_zone">
+                        <img src="../assets/uploadIcon.webp" alt="uploadIcon" srcset="" id="imgCard1">
+                        <p class="drop_zone_text">Click to upload QR code</p>
+                    </div>
+                    <input type="file" id="file" hidden accept="image/*" multiple>
+                </div>
+                <div class="item item2" id="css">
+                    <img id="imgCard2" alt="imgBgc" src="../assets/onThisPageIcon.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

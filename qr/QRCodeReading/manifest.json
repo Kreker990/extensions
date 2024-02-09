@@ -1,6 +1,6 @@
 {
     "name": "QR Code Reading",
-    "description": "QR Code Reading: Upload QR code or Scan on Site",
+    "description": "QR Code Reading: reading qr codes on the website",
     "version": "1.0.0",
     "manifest_version": 3,
     "icons": {
