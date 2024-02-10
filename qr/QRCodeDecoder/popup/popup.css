@@ -17,7 +17,7 @@
 
 
 body {
-    background: rgb(180, 226, 255);
+    background: rgb(225, 225, 225);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +54,7 @@ body {
     border-radius: 6px;
     color: #475569;
     transition-duration: 0.3s;
-    background-color: #f1f5f9;
+    background-color: #f1f2f9;
     border: 2px solid #e2e8f0;
     display: flex;
     align-items: center;
@@ -63,7 +63,7 @@ body {
 h4 {
     font-weight: 500;
     font-size: 18px;
-    color: rgb(123, 169, 233);
+    color: rgb(5, 0, 55);
 }
 
 ::-webkit-scrollbar {
@@ -76,17 +76,17 @@ h4 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(48, 127, 217);
+    background: rgb(84, 78, 120);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(48, 127, 217, 0.764);
+    background: rgb(51, 42, 104);
 }
 
 .resultBlock {
     padding: 10px;
-    background-color: #ffffff;
+    background-color: white;
     width: 450px;
     border-radius: 10px;
     display: flex;
@@ -107,7 +107,7 @@ h4 {
     transition-duration: 0.3s;
     cursor: pointer;
     background-color: #f1f5f9;
-    border: 2px solid #e2e8f0;
+    border: 2px solid rgb(84, 78, 120);
     font-size: 14px;
     display: none;
 }
@@ -133,7 +133,7 @@ h4 {
     position: relative;
     overflow: hidden;
     transition-duration: 0.3s;
-    background-color: rgb(87, 144, 223);
+    background-color: rgb(84, 78, 120);
     margin: 0 72px;
     padding: 3px;
     white-space: nowrap;
@@ -204,8 +204,8 @@ h4 {
     position: relative;
     width: 450px;
     height: 350px;
-    border: 1px solid #5ea9ff;
-    box-shadow: 0px 0px 10px 1px rgba(75, 171, 255, 0.544);
+    border: 1px solid #00244c;
+    box-shadow: 0px 0px 10px 1px rgba(25, 0, 107, 0.544);
     overflow: hidden;
     /* box-shadow: 0px 0px 15px 5px rgba(17, 75, 99, 0.674); */
     color: rgb(160, 236, 241);
@@ -246,8 +246,8 @@ nav a {
 
 .item {
     width: 450px;
-    color: black;    background-color: rgb(143, 184, 222);
-
+    color: black;    
+    background-color: rgb(45, 39, 101);
     display: flex;
     row-gap: 25px;
     justify-content: center;
