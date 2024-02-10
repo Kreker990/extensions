@@ -17,7 +17,7 @@
 
 
 body {
-    background: rgb(180, 226, 255);
+    background: #fffcee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,10 +52,10 @@ body {
     border-radius: 10px;
     padding: 4px;
     border-radius: 6px;
-    color: #475569;
+    color: #41250f;
     transition-duration: 0.3s;
-    background-color: #f1f5f9;
-    border: 2px solid #e2e8f0;
+    background-color: #e0cbb2;
+    border: 2px solid white;
     display: flex;
     align-items: center;
 }
@@ -63,7 +63,7 @@ body {
 h4 {
     font-weight: 500;
     font-size: 18px;
-    color: rgb(123, 169, 233);
+    color: #fffcee;
 }
 
 ::-webkit-scrollbar {
@@ -71,22 +71,22 @@ h4 {
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
+    box-shadow: inset 0 0 5px #fffcee;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(48, 127, 217);
+    background: #41250f;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(48, 127, 217, 0.764);
+    background: #705948;
 }
 
 .resultBlock {
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #41250f;
     width: 450px;
     border-radius: 10px;
     display: flex;
@@ -106,14 +106,15 @@ h4 {
     color: #475569;
     transition-duration: 0.3s;
     cursor: pointer;
-    background-color: #f1f5f9;
-    border: 2px solid #e2e8f0;
+    background-color: #e0cbb2;
+    border: 2px solid #fffcef;
     font-size: 14px;
     display: none;
 }
 
 .buttonResult:hover {
-    border: 2px solid #475569;
+    border: 2px solid #d16500;
+
 }
 
 .buttonResult:active {
@@ -133,7 +134,7 @@ h4 {
     position: relative;
     overflow: hidden;
     transition-duration: 0.3s;
-    background-color: rgb(87, 144, 223);
+    background-color: #41250f;
     margin: 0 72px;
     padding: 3px;
     white-space: nowrap;
@@ -160,7 +161,7 @@ h4 {
     right: 0%;
     width: 0%;
     opacity: 0;
-    color: white;
+    color: #fffcee;
     font-size: 14px;
     font-weight: 600;
     transition-duration: .3s;
@@ -204,8 +205,8 @@ h4 {
     position: relative;
     width: 450px;
     height: 350px;
-    border: 1px solid #5ea9ff;
-    box-shadow: 0px 0px 10px 1px rgba(75, 171, 255, 0.544);
+    border: 1px solid #41250f;
+    box-shadow: 0px 0px 10px 1px #41250f77;
     overflow: hidden;
     /* box-shadow: 0px 0px 15px 5px rgba(17, 75, 99, 0.674); */
     color: rgb(160, 236, 241);
@@ -246,7 +247,8 @@ nav a {
 
 .item {
     width: 450px;
-    color: black;    background-color: rgb(143, 184, 222);
+    color: black;
+    background-color: #e0cbb2;
 
     display: flex;
     row-gap: 25px;
@@ -261,15 +263,16 @@ nav a {
     object-fit: contain;
     margin-bottom: 30px;
 }
+
 #imgCard1 {
     width: 220px;
-    height: 200px;
+    /* height: 200px; */
     margin-bottom: 10px;
     border-radius: 15px;
 }
 
 
-#drop_zone{
+#drop_zone {
     margin-bottom: 40px;
     cursor: pointer;
     width: 100%;
@@ -279,13 +282,14 @@ nav a {
     padding: 15px 0;
     background-color: rgb(255, 255, 255);
 }
-.drop_zone_text{
+
+.drop_zone_text {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
 }
 
-#file{
+#file {
     display: none;
 }
 
@@ -293,7 +297,7 @@ nav a {
 .dot-spinner {
     --uib-size: 24px;
     --uib-speed: .9s;
-    --uib-color: #183153;
+    --uib-color: #e0cbb2;
     position: relative;
     display: flex;
     align-items: center;

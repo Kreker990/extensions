@@ -38,11 +38,11 @@ async function fetchRequest(formData) {
                 const dataQr = resData[0].symbol[0].data
                 if (dataQr == '\nQR-Code:') {
                     result.innerHTML = 'QR-Code contains nothing'
-                    result.style.color = '#475569'
+                    result.style.color = '#41250f'
                 } else {
                     if (dataQr?.split('QR-Code')[0]) {
                         result.innerHTML = dataQr?.split('QR-Code')[0]
-                        result.style.color = '#475569'
+                        result.style.color = '#41250f'
                         url = dataQr?.split('QR-Code')[0]
                         followBtn.style.display = isValidUrl(dataQr) ? 'block' : 'none'
                         copyBtn.style.display = 'block'
