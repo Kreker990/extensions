@@ -18,8 +18,18 @@
         "storage",
         "cookies",
         "clipboardWrite",
-        "notifications"
+        "notifications",
+        "declarativeNetRequest"
     ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "disable-csp",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
     "background": {
         "service_worker": "background.js"
     },
