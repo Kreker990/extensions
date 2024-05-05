@@ -46,11 +46,6 @@ async function fetchRequest(formData) {
                         url = dataQr?.split('QR-Code')[0]
                         followBtn.style.display = isValidUrl(dataQr) ? 'block' : 'none'
                         copyBtn.style.display = 'block'
-                        chrome.cookies.set({
-                            url: currentTabUrl,
-                            name: 'image',
-                            value: JSON.stringify(dataQr?.split('QR-Code')[0])
-                        });
                     } else {
                         result.innerHTML = resData[0].symbol[0].error
                     }
@@ -89,7 +84,7 @@ async function uploadScreenshot(imageUri) {
             fetchRequest(formData);
         });
     } catch (error) {
-        console.error("Check your Internet connection", error);
+        console.log("Check your Internet connection", error);
     }
 }
 
@@ -117,10 +112,45 @@ copyBtn.addEventListener('click', async () => {
     try {
         await navigator.clipboard.writeText(url);
     } catch (err) {
-        console.error('Failed to copy: ', err);
+        console.log('Failed to copy: ', err);
     }
 });
 
+// функция для обновления скрина на сайте
+const updateResultQrOnThisPage = async (imageUri) => {
+    try {
+        const res = await fetch(imageUri);
+        const blob = await res.blob();
+        const file = new File([blob], "screenshot.png", { type: 'image/png' });
+
+        const formData = new FormData();
+        formData.append('file', file);
+        fetchRequest(formData);
+    } catch (error) {
+        console.log("Check your Internet connection", error);
+    }
+}
+
+chrome.alarms.create('updateResultQrOnThisPage', {
+    periodInMinutes: 0.5,
+});
+
+chrome.alarms.onAlarm.addListener((alarm) => {
+    if (alarm.name === 'updateResultQrOnThisPage') {
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            currentTabUrl = tabs[0].url;
+            if ("chrome://extensions/" !== currentTabUrl) {
+                chrome.tabs.captureVisibleTab(tabs[0].windowId, { format: 'png' }, (imageUri) => {
+                    if (chrome.runtime.lastError) {
+                        return;
+                    }
+                    imgBgc.src = imageUri;
+                    updateResultQrOnThisPage(imageUri)
+                });
+            }
+        });
+    }
+});
 
 
 
