@@ -1,0 +1,55 @@
+{
+    "name": "QR Code Manager",
+    "description": "QR Code Manager: Quick Code Reader",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "assets/logo.png",
+        "32": "assets/logo.png",
+        "48": "assets/logo.png",
+        "128": "assets/logo.png"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "alarms",
+        "clipboardWrite",
+        "notifications",
+        "declarativeNetRequest"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "disable-csp",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "./popup/popup.html",
+        "default_title": "QR Code Manager",
+        "default_icon": {
+            "16": "assets/logo.png",
+            "32": "assets/logo.png",
+            "64": "assets/logo.png"
+        }
+    }
+}
